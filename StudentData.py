@@ -71,11 +71,15 @@ def above_avg():
     avg_age=min_max_age()[2]
     min_age=min_max_age()[0]
 
+    resultSet=[]
+
     for lists in records:
-        if int(float(lists[3]))>=int(avg_gpa) and int(lists[2]) in range(min_age+1,avg_age+1):
-            print(lists[0])
+        if float(float(lists[3]))>=float(avg_gpa) and int(lists[2]) in range(min_age,avg_age+1):
+            resultSet.append(lists[0])
 
-
+    resultSet.sort()
+    for i in resultSet:
+        print(i)
 
 
 def min_max_aged_students():
