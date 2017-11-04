@@ -1,13 +1,14 @@
+file=input().rstrip()
 regList=[]
 def print_file():
     print("Input file")
-    f=open("xxxx.txt",'r')
+    f=open(file,'r')
     for line in f.readlines():
         print(line,end='')
     f.close()
 def segregated_marks():
     print('Consolidated data')
-    f = open("xxxx.txt", 'r')
+    f = open(file, 'r')
     record=[]
     for line in f.readlines():
         temp=line.split(" ")
@@ -45,5 +46,5 @@ def singular(regno):
 print_file()
 segregated_marks()
 print_average()
-regno=input()
+regno=input().rstrip()
 singular(regno)
